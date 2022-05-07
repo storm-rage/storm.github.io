@@ -1,0 +1,16 @@
+{
+  "name": "vuepress-yarn",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "docs:dev": "vuepress dev docs --temp .temp",
+    "docs:build": "vuepress build docs"
+  },
+  "dependencies": {
+    "-": "^0.0.1"
+  },
+  "devDependencies": {
+    "vuepress": "^1.9.7"
+  }
+}

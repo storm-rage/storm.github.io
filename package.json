@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "docs:dev": "vuepress dev docs --temp .temp",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "deploy-gh": "GH=1 yarn docs:build && bash scripts/deploy-gh.sh"
   },
   "dependencies": {
     "-": "^0.0.1"

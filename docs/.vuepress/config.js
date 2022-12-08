@@ -1,27 +1,31 @@
 module.exports = {
     publicPath: '/',
-    title: 'Hello VuePress999',
+    title: 'Hello robot',
     description: 'Just playing around',
-    base: "/",
-    dest: "./dist",
+    head: [
+        ['link', { rel: 'icon', href: "/robot.gif" }],  //浏览器的标签栏的网页图标
+    ],
+    base: "/storm.github.io/",//部署时才需要放开
+    dest: "./dist",//部署时才需要放开
     themeConfig: {
+        logo: "/robot.gif",
         //搜索结果数量
         searchMaxSuggestions: 10,
         nav: [
             //页面路由默认读取目录下的readme.md
             { text: 'Home', link: '/' },
-            { text: 'Guide', link: '/guide/' },
+            { text: 'Guide', link: '/guide/guide.md' },
             { text: 'Others', link: '/others/' ,
                 items: [
-                    {text: 'sql', link: '/others/sql'},
-                    {text: 'flutter', link: '/others/flutter'},
+                    {text: 'sql', link: '/others/sql.md'},
+                    {text: 'flutter', link: '/others/flutter.md'},
                 ]
             },
             { text: '深度学习',
                 items: [
-                    {text: 'js基础', link: '/deep/one'},
-                    {text: 'vue', link: '/deep/two'},
-                    {text: 'react', link: '/deep/three'}
+                    {text: 'js基础', link: '/deep/one.md'},
+                    {text: 'vue', link: '/deep/two.md'},
+                    {text: 'react', link: '/deep/three.md'}
                 ]
             }
         ],

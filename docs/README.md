@@ -1,8 +1,8 @@
 ---
 home: true
 heroImage: /robot.gif
-heroText: Hero 标题
-tagline: Hero 副标题
+heroText: 主要标题
+tagline: 副标题
 actionText: 快速上手 →
 actionLink: /zh/guide/
 features:

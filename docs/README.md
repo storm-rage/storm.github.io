@@ -1,10 +1,10 @@
 ---
 home: true
 heroImage: /robot.gif
-heroText: 主要标题
-tagline: 副标题
+heroText: hello guys!
+tagline: 一点一滴都是进步
 actionText: 快速上手 →
-actionLink: /zh/guide/
+actionLink: /vue/vue2.0/
 features:
 - title: 简洁至上
   details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。

@@ -820,7 +820,7 @@ setup(){
 
 移除v-on.native修饰符
 
-移除过滤器（filter
+移除过滤器（filter)
 
 
 

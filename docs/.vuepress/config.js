@@ -5,8 +5,8 @@ module.exports = {
     head: [
         ['link', { rel: 'icon', href: "/robot.gif" }],  //浏览器的标签栏的网页图标
     ],
-    base: "/storm.github.io/",//部署时才需要放开
-    dest: "./dist",//部署时才需要放开
+    base: "/storm.github.io/",//部署时放开
+    dest: "./dist",//部署时放开
     themeConfig: {
         logo: "/robot.gif",//首页导航栏logo
         //搜索结果数量

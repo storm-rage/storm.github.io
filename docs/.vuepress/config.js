@@ -52,8 +52,8 @@ module.exports = {
                 items: [
                     // {text: '前端工程化', link: '/Engineering/Engineering'},
                     // {text: 'webpack', link: '/Engineering/webpack'},
-                    {text: 'vite', link: '/docs/Engineering/vite.md'},
-                    {text: '常用工具', link: '/docs/Engineering/tools.md'},
+                    {text: 'vite', link: '/Engineering/vite.md'},
+                    {text: '常用工具', link: '/Engineering/tools.md'},
                 ]
             },
             {

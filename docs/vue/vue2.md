@@ -39,15 +39,15 @@ new Vue({//这里就是一个vue实例
 }
 </style>
 ```
-::: danger DANGER
-this is dangerous
-:::
-::: tip TIP
-this is tip
-:::
-::: warning WARNING
-this is warning
-:::
+<!--- ::: danger DANGER --->
+ <!--- this is dangerous --->
+<!--- :::--->
+<!--- ::: tip TIP --->
+<!--- this is tip --->
+<!--- ::: --->
+<!--- ::: warning WARNING --->
+<!--- this is warning --->
+<!--- ::: --->
 ## 二、组件间通信
 ### 1、props和$emit
 父子通讯

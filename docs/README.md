@@ -4,7 +4,7 @@ heroImage: /robot.gif
 heroText: hello guys!
 tagline: 一点一滴都是进步
 actionText: 快速上手 →
-actionLink: /vue/vue2.0/
+actionLink: /vue/vue2/
 features:
 - title: 简洁至上
   details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。

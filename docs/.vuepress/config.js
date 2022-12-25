@@ -5,27 +5,26 @@ module.exports = {
     head: [
         ['link', { rel: 'icon', href: "/robot.gif" }],  //浏览器的标签栏的网页图标
     ],
-    base: "/storm.github.io/",//部署时放开
-    dest: "./dist",//部署时放开
+    base: "/storm.github.io/",//设置仓库名称，部署时放开
+    dest: "./dist",//打包到的目录，部署时放开
     themeConfig: {
         logo: "/robot.gif",//首页导航栏logo
-        //搜索结果数量
-        searchMaxSuggestions: 10,
+        searchMaxSuggestions: 10,//搜索结果数量
         nav: [
             //页面路由默认读取目录下的readme.md
-            // { text: 'Home', link: '/' },
-            { text: 'Vue', link: '/vue/',
+            { text: 'Home', link: '/' },
+            { text: 'Vue',
                 items: [
-                    {text: 'vue2.0', link: '/vue/vue2.0.md'},
-                    {text: 'vue3.0', link: '/vue/vue3.0.md'},
+                    {text: 'vue2', link: '/vue/vue2.md'},
+                    {text: 'vue3', link: '/vue/vue3.md'},
                     {text: 'vuex', link: '/vue/vuex.md'},
                 ]
             },
             {
                 text: 'React',
                 items: [
-                    {text: 'react进阶', link: '/react/reactExtend'},
-                    {text: 'react状态管理', link: '/react/reactState'},
+                    {text: 'react进阶', link: '/react/reactExtend.md'},
+                    {text: 'react状态管理', link: '/react/reactState.md'},
                     // {text: 'react组件封装', link: '/others/flutter'},
                     // {text: 'react源码分析', link: '/others/flutter'},
                     // {text: '实战总结', link: '/others/flutter'},
@@ -39,52 +38,30 @@ module.exports = {
             //         // {text: 'express-ts实战', link: '/others/flutter'},
             //     ]
             // },
-            {
-                text: 'ts',
-                items: [
-                    // {text: 'js基础', link: '/js/README'},
-                    // {text: 'ts初探', link: '/js/tsFirst'},
-                    // {text: 'ts基础', link: '/js/tsSecond'},
-                    // {text: 'ts工程', link: '/js/tsThird'},
-                ]
-            },
+            // {
+            //     text: 'ts',
+            //     items: [
+            //         {text: 'js基础', link: '/js/README'},
+            //         {text: 'ts初探', link: '/js/tsFirst'},
+            //         {text: 'ts基础', link: '/js/tsSecond'},
+            //         {text: 'ts工程', link: '/js/tsThird'},
+            //     ]
+            // },
             {
                 text: '工程化',
                 items: [
                     // {text: '前端工程化', link: '/Engineering/Engineering'},
                     // {text: 'webpack', link: '/Engineering/webpack'},
-                    {text: 'vite', link: '/Engineering/vite'},
-                    {text: '常用工具', link: '/Engineering/tools'},
+                    {text: 'vite', link: '/docs/Engineering/vite.md'},
+                    {text: '常用工具', link: '/docs/Engineering/tools.md'},
                 ]
             },
-            // {
-            //     text: '其它',
-            //     items: [
-            //         {text: 'sql', link: '/others/sql'},
-            //         {text: 'java', link: '/others/java'},
-            //         {text: 'flutter', link: '/others/flutter'},
-            //     ]
-            // },
-            // { text: 'Guide', link: '/guide/guide.md' },
-            // { text: 'Others', link: '/others/' ,
-            //     items: [
-            //         {text: 'sql', link: '/others/sql.md'},
-            //         {text: 'flutter', link: '/others/flutter.md'},
-            //     ]
-            // },
             {
                 text: '问题总结',
                 items: [
                     {text: '部分一', link: '/programResolve/chapter1'},
                 ]
             },
-            // { text: '深度学习',
-            //     items: [
-            //         {text: 'js基础', link: '/deep/one.md'},
-            //         {text: 'vue', link: '/deep/two.md'},
-            //         {text: 'react', link: '/deep/three.md'}
-            //     ]
-            // }
         ],
         sidebar: 'auto',//根据文章标题 自动生成侧边栏
         // sidebar: {

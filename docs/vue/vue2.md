@@ -143,7 +143,7 @@ this is warning
         childMsg: 'child component'
       }
     },
-    created(){
+    mounted(){
       //取父组件的data属性值
       this.msgTxt = this.$parent.parentMsg
     }
@@ -293,7 +293,7 @@ this.$root.foo = 2
     components: {
       ChildB
     },
-    created(){
+    mounted(){
       console.log(this.$attrs) //{name: "tao", age: "28", job: "worker", title: "this is title"}
       this.$listeners.click() //Hello
     }
@@ -309,7 +309,7 @@ this.$root.foo = 2
 <script>
   export default {
     props: ["name"], //name作为props属性绑定
-    created(){
+    mounted(){
       console.log(this.$attrs) //{age: "28", job: "worker", title: "this is title"}
       this.$listeners.click()  //hello
     }

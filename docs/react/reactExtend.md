@@ -285,7 +285,7 @@ const newState = produce(state, (draft) => {
 console.log(newState.key1 === state.key1);  //false
 console.log(newState.key2 === state.key2);  //true
 ```
-## hooks
+## 进阶
 ### 1.hooks优势
 - class的缺点
   1. 组件间的状态逻辑很难复用

@@ -24,7 +24,7 @@ module.exports = {
                 text: 'React',
                 items: [
                     {text: 'react进阶', link: '/react/reactExtend.md'},
-                    {text: 'react状态管理', link: '/react/reactState.md'},
+                    // {text: 'react状态管理', link: '/react/reactState.md'},
                     // {text: 'react组件封装', link: '/others/flutter'},
                     // {text: 'react源码分析', link: '/others/flutter'},
                     // {text: '实战总结', link: '/others/flutter'},
@@ -52,14 +52,14 @@ module.exports = {
                 items: [
                     // {text: '前端工程化', link: '/Engineering/Engineering'},
                     // {text: 'webpack', link: '/Engineering/webpack'},
-                    {text: 'vite', link: '/Engineering/vite.md'},
+                    // {text: 'vite', link: '/Engineering/vite.md'},
                     {text: '常用工具', link: '/Engineering/tools.md'},
                 ]
             },
             {
                 text: '问题总结',
                 items: [
-                    {text: '部分一', link: '/programResolve/chapter1'},
+                    {text: '部分一', link: '/programResolve/chapter1.md'},
                 ]
             },
         ],

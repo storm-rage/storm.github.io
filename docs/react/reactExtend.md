@@ -175,7 +175,7 @@ class组件中，可申明如下生命周期：
 - 参数变化时：componentWillReceiveProps(props参数变化) -> shouldComponentUpdate -> componentWillUpdate -> render -> componentDidUpdate
 - 组件卸载：componentWillUnMount
 #### 新版本
-![An image](/react-lifecycle.png)
+![An image](/storm.github.io/react-lifecycle.png)
 - static getDerivedStateFromProps(props, state)：在调用 render 方法之前调用，并且在初始挂载及后续更新时都会被调用。它应返回一个对象来更新 state，如果返回 null 则不更新任何内容。条件： state 的值在任何时候都取决于 props
 - getSnapshotBeforeUpdate()：在最近一次渲染输出（提交到 DOM 节点）之前调用。它使得组件能在发生更改之前从 DOM 中捕获一些信息（例如，滚动位置）。此生命周期的任何返回值将作为参数传递给 componentDidUpdate()
 - static getDerivedStateFromError(error)：会在后代组件抛出错误后被调用 ，它将抛出的错误作为参数，并返回一个值以更新 state

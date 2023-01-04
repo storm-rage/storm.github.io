@@ -136,6 +136,60 @@ let arr4 = function() {
 console.log(arr4)//[1,6,8,9,3]
 
 ```
+## 三、防抖和节流
+### 基本概念
+- 函数防抖（debounce）：当持续触发事件时，一定时间段内没有再触发事件，事件处理函数才会执行一次，如果设定的时间到来之前，又一次触发了事件，就重新开始延时。
+- 函数节流（throttle）：当持续触发事件时，保证一定时间段内只调用一次事件处理函数。
+### 应用场景
+- 节流（控制次数）：resize、scroll
+- 防抖：input（模糊匹配）
+### 手写防抖和节流
+```js
+//防抖
+function debounce(func, time) {
+    let timer = null
+    return () => {
+        clearTimeout(timer)
+        timer = setTimeout(()=> {
+            func.apply(this, arguments) //保证内部this指向input对象
+        }, time)
+    }
+}
+
+//尾节流，时间戳写法首次立即执行
+function throttle(func, time) {
+    let activeTime = 0
+    return () => {
+        const current = Date.now()
+        if(current - activeTime > time) {
+            func.apply(this, arguments)
+            activeTime = Date.now()
+        }
+    }
+}
+```
+## 四、nextTick原理
 
 
-
+## 五、深浅拷贝
+深拷贝方法
+### JSON.stringify() JSON.parse()
+要求数据必须符合json格式，如果数据中存在function和symbol会转换失败
+### 递归
+实现原理
+1. 使用递归的方式实现数组、对象的深拷贝。
+2. 先判断各个字段类型，然后用递归解决嵌套数据。
+3. 判断拷贝的要进行深拷贝的是数组还是对象，是数组的话进行数组拷贝，是对象的话进行对象拷贝。
+4. 进行深拷贝的不能为空，并且是对象或者数组
+### 插件lodash中的方法
+```js
+import lodash from 'lodash'
+var objects = [1,{'a':1},{'b':2}]
+var deep = lodash.cloneDeep(objects)
+deep[0]=2
+deep[1].a=2
+console.log(objects[0])//1
+console.log(deep[0])//2
+console.log(objects[1].a)//1
+console.log(objects[1].a)//2
+```

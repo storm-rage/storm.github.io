@@ -24,6 +24,7 @@ module.exports = {
                 text: 'React',
                 items: [
                     {text: 'react进阶', link: '/react/reactExtend.md'},
+                    {text: 'react与vue区别', link: '/react/reactDiff.md'},
                     // {text: 'react状态管理', link: '/react/reactState.md'},
                     // {text: 'react组件封装', link: '/others/flutter'},
                     // {text: 'react源码分析', link: '/others/flutter'},

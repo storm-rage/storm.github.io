@@ -168,19 +168,7 @@ function throttle(func, time) {
     }
 }
 ```
-## 四、nextTick原理
 
-
-## 五、深浅拷贝
-深拷贝方法
-### JSON.stringify() JSON.parse()
-要求数据必须符合json格式，如果数据中存在function和symbol会转换失败
-### 递归
-实现原理
-1. 使用递归的方式实现数组、对象的深拷贝。
-2. 先判断各个字段类型，然后用递归解决嵌套数据。
-3. 判断拷贝的要进行深拷贝的是数组还是对象，是数组的话进行数组拷贝，是对象的话进行对象拷贝。
-4. 进行深拷贝的不能为空，并且是对象或者数组
 ### 插件lodash中的方法
 ```js
 import lodash from 'lodash'
@@ -193,3 +181,4 @@ console.log(deep[0])//2
 console.log(objects[1].a)//1
 console.log(objects[1].a)//2
 ```
+

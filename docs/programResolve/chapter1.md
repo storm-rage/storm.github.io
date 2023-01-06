@@ -169,16 +169,4 @@ function throttle(func, time) {
 }
 ```
 
-### 插件lodash中的方法
-```js
-import lodash from 'lodash'
-var objects = [1,{'a':1},{'b':2}]
-var deep = lodash.cloneDeep(objects)
-deep[0]=2
-deep[1].a=2
-console.log(objects[0])//1
-console.log(deep[0])//2
-console.log(objects[1].a)//1
-console.log(objects[1].a)//2
-```
 

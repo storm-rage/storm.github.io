@@ -62,6 +62,19 @@ fix($compile): couple of unit tests for ie9
 xxxx
 Close #393
 ```
+- 上传项目文件到github
+
+1. 配置ssh
+2. 创建仓库
+3. 本地git操作
+ - 进入需要上传的本地项目文件夹，右键，选择Git Bash Here，如果右键没有该选项应该是git没有安装成功
+ - 通过命令git init把这个文件夹变成Git可管理的仓库
+ - 通过 git add . 将项目(文件夹下的所有文件)添加到仓库中。注意：add后面有一个空格，和.隔开
+ - 用git commit -m "你的备注” 将项目提交到仓库
+ - git remote add origin git@github.com:****/***.git
+ - git branch -M main
+ - git push -u origin main
+4. 可能遇到的错误
 ## 2.npm
 ```sh
 npm install -g cnpm --registry=https://registry.npm.taobao.org

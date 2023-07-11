@@ -63,7 +63,7 @@ module.exports = {
                     {text: '部分一', link: '/programResolve/chapter1.md'},
                     {text: '高级技能', link: '/programResolve/advancedSkills.md'},
                     {text: 'ts', link: '/programResolve/ts.md'},
-                    // {text: '部分二', link: '/programResolve/chapter2.md'},
+                    {text: '部分二', link: '/programResolve/chapter2.md'},
                     // {text: '面试要点', link: '/programResolve/interview.md'},
                 ]
             },

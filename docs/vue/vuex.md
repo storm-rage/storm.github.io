@@ -1,4 +1,18 @@
 # vue状态管理
+### 简单理解
+每一个 Vuex 应用的核心就是 store，里面又包括:
+1. state（数据）：用来存放数据源，就是公共状态;
+2. getters（数据加工）：有的时候需要对数据源进行加工，返回需要的数据；
+3. actions（事件）：要执行的操作，可以进行同步或者异步事件
+4. mutations（执行）：操作结束之后，actions通过commit更新state数据源
+5. modules：使用单一状态树，致使应用的全部状态集中到一个很大的对象，所以把每个模块的局部状态分装使每一个模块拥有本身的 state、mutation、action、getters、甚至是嵌套子模块；
+
+### 工作流程
+vuex的工作流程就是：
+1. 通过dispatch去提交一个actions，
+2. actions接收到这个事件之后，在actions中可以执行一些异步|同步操作，根据不同的情况去分发给不同的mutations，
+3. actions通过commit去触发mutations，
+4. mutations去更新state数据，state更新之后，就会通知vue进行渲染。
 ## 一、vuex简介
 ### 1、定义
 在vue项⽬中，每个组件的数据都有其独⽴的作⽤域。当组件间需要跨层级或者同层之间频繁传递的时候，数据交互就会⾮常繁琐。vuex的主要作⽤就是集中管理所有组件的数据和状态以及规范数据修改的⽅式。

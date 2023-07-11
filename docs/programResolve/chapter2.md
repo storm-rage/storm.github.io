@@ -17,7 +17,12 @@ console.log(str2 === str)
 
   console.log(str1 === str)　　//　ture（str和str1同为字符串，且值相同）
   console.log(str2 === str)　　//　false（str2为字符串对象，对象和基本类型值不相等）
-  
+
+## 数据类型判断方式
+typeOf 可以判断常规数据，缺点判断数组，object，null会返回object
+instanceOf 判断是否是某个类型的实例
+constructor.name 
+
 # typeScript面试题
 ## type 和 interface的异同
 - 用interface描述数据结构，用type描述数据类型
@@ -28,6 +33,28 @@ console.log(str2 === str)
   - type 可以声明基本类型别名，联合类型，元组等类型
   - type语句中还可以使用typeof获取实例的类型进行赋值
   - interface能够声明合并
+
+- interface 接口，TS 设计出来主要用于定义【对象类型】，可以对【对象】的形状进行描述
+- type 型别名，为类型创建一个新名称。它并不是一个类型，只是一个别名。
+
+类型别名可以起到类似接口的作用。主要区别在于type类型一旦定义就不能再添加别的属性，interface可以添加
+
+使用的区别
+
+interface
+- 接口可以重复声明，ts会将他们合并
+- 如果是type，重复声明会报错
+
+【type】
+- 可以定义基本类型别名，如type StringType = string
+- 可以声明联合类型，如type paramType = number | string
+- 可以声明元组类型，如type arrType = [string,string,number]
+
+总结
+1. 如果需要被extends或者implements,则尽量使用接口
+2. 如果需要使用联合类型或者元组类型，类型别名更合适
+3. 如果定义对象，则都可以
+4. 如果实在不想选择，就优先使用interface实现，如果不能再用type
 ```js
 //1、都可以描述一个对象或者函数
 interface User {

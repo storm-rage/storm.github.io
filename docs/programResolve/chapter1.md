@@ -134,7 +134,8 @@ let arr4 = function() {
   return tarArr
 }
 console.log(arr4)//[1,6,8,9,3]
-
+//set数据类型
+let arr4 = [...new Set(arr)]//[1,6,8,9,3]
 ```
 ## 三、防抖和节流
 ### 基本概念
@@ -168,5 +169,86 @@ function throttle(func, time) {
     }
 }
 ```
+## 四、tree数据转换
+### tree数据转换为一维数组
+## 五、webpack配置与应用
+## 六、this指向
+### 箭头函数
+先看结论：
+- 普通函数this指向看调用；箭头函数的this指向看声明，指向声明时候的父级作用域
+- setTimeout会延迟函数的声明
+```js
+let app1 = {
+    a : 1,
+    fn : () => {
+        console.log(this)
+        console.log(this.a)
+  }
+}
+app1.fn()//输出undefined 箭头函数this指向windows
+//根据第一条可知，声明时就已经确定this的指向为父级作用域，也就是window，所以输出undefined
+let app2 = {
+    a : 1,
+    fn : function () {
+      console.log(this.a)
+    }
+}
+app2.fn()//输出1 箭头函数this指向app2
+//根据第一条可知，调用的时候this指向app2
+let app3 = {
+    a : 1,
+    fn : function() {
+        setTimeout(() => {
+            console.log(this)//指向app3
+            console.log(this.a)//1
+        },500)
+    }
+}
+app3.fn()
+//根据第一条可知，setTimeout中函数的父级是app3，所以是指向app3
+function Person() {
+    this.age = 0
+    setTimeout(() => {
+        age = 10
+      //回调里面的this变量指向期望的对象
+        console.log(this.age)
+    },3000)
+}
+let p = new Person()//输出0  setTimeout中的this指向全局变量
+
+let app4 = {
+    a: 1,
+  fn: function() {
+        setTimeout(function (){
+            console.log(this)//指向window
+            console.log(this.a)//undefined
+        },500)
+  }
+}
+app4.fn()
+//因为普通函数中，setTimeout的this指向全局变量
+//因为setTimeout中重新声明了一个函数（而且是全局的），所以这个函数再调用的时候并不是作为app4的方法调用，而是作为一个函数调用，所以是window
+
+//-------------------setTimeout的this--------------------------
+//默认情况下代码
+function Person_1() {
+    this.age = 0
+  setTimeout(function() {
+      console.log(this.age)// setTimeout的this指向全局变量，所以是undefined
+  },1000)
+}
+let p_1 = new Person_1()//3秒后返回window对象
+//--------------------对象的this指向问题------------------------------
+let obj = {
+    prop : 33,
+    f: function () {
+        return this.prop
+    }
+}
+console.log(obj.f())//被对象obj调用，所以this指向obj，prop为33
+let obj_ex = obj.f
+console.log(obj_ex())//全局环境内没有prop，所以undefined
+```
+### 箭头函数
 
 

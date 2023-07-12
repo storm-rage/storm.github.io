@@ -6,13 +6,6 @@
 3. actions（事件）：要执行的操作，可以进行同步或者异步事件
 4. mutations（执行）：操作结束之后，actions通过commit更新state数据源
 5. modules：使用单一状态树，致使应用的全部状态集中到一个很大的对象，所以把每个模块的局部状态分装使每一个模块拥有本身的 state、mutation、action、getters、甚至是嵌套子模块；
-
-### 工作流程
-vuex的工作流程就是：
-1. 通过dispatch去提交一个actions，
-2. actions接收到这个事件之后，在actions中可以执行一些异步|同步操作，根据不同的情况去分发给不同的mutations，
-3. actions通过commit去触发mutations，
-4. mutations去更新state数据，state更新之后，就会通知vue进行渲染。
 ## 一、vuex简介
 ### 1、定义
 在vue项⽬中，每个组件的数据都有其独⽴的作⽤域。当组件间需要跨层级或者同层之间频繁传递的时候，数据交互就会⾮常繁琐。vuex的主要作⽤就是集中管理所有组件的数据和状态以及规范数据修改的⽅式。
@@ -33,6 +26,12 @@ vuex的工作流程就是：
 vuex基于flux思想为vue框架定制，区分同步和异步，定义两种行为，Actions 用来处理异步状态变更（内部还是调用 Mutations），Mutations 处理同步的状态变更，整个链路应该是一个闭环，单向的，完美契合 FLUX 的思想
 
 「页面 dispatch/commit」-> 「actions/mutations」-> 「状态变更」-> 「页面更新」-> 「页面 dispatch/commit」...
+### 4、工作流程
+vuex的工作流程就是：
+1. 通过dispatch去提交一个actions，
+2. actions接收到这个事件之后，在actions中可以执行一些异步|同步操作，根据不同的情况去分发给不同的mutations，
+3. actions通过commit去触发mutations，
+4. mutations去更新state数据，state更新之后，就会通知vue进行渲染。
 ## 二、五大核心
 1. vue使用单一状态树，单一状态树让我们能够直接地定位任一特定的状态片段，在调试的过程中也能轻易地取得整个当前应用状态的快照。
    - 用一个对象（主干）就包含了全部的（分支）应用层级状态。

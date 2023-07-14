@@ -19,9 +19,10 @@ console.log(str2 === str)
   console.log(str2 === str)　　//　false（str2为字符串对象，对象和基本类型值不相等）
 
 ## 数据类型判断方式
-typeOf 可以判断常规数据，缺点判断数组，object，null会返回object
-instanceOf 判断是否是某个类型的实例
-constructor.name 
+- typeOf 可以判断基本类型数据，缺点判断数组，object，null会返回object
+- instanceof 判断是否是某个类型的实例，官方解释：instanceOf用来检测构造函数的`prototype`是否出现在某个实例对象的原型链上，语法 object instanceof constructor
+- constructor.name 
+- Object.prototype.toString.call() 返回格式为[object xxx]，xxx为数据格式
 
 # typeScript面试题
 ## type 和 interface的异同

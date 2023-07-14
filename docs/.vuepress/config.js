@@ -60,10 +60,11 @@ module.exports = {
             {
                 text: '问题总结',
                 items: [
-                    {text: '部分一', link: '/programResolve/chapter1.md'},
+                    {text: '章节一', link: '/programResolve/chapter1.md'},
+                    {text: '章节二', link: '/programResolve/chapter2.md'},
                     {text: '高级技能', link: '/programResolve/advancedSkills.md'},
                     {text: 'ts', link: '/programResolve/ts.md'},
-                    {text: '部分二', link: '/programResolve/chapter2.md'},
+                    {text: '服务器', link: '/programResolve/serve.md'},
                     // {text: '面试要点', link: '/programResolve/interview.md'},
                 ]
             },

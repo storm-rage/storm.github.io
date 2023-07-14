@@ -28,7 +28,7 @@ obj.name !== undefined //true
 Object.keys(obj).indexOf('name')//0
 Object.keys(obj).indexOf('age')//1
 ```
-## 二、 数组方法总结
+## 二、 高阶函数
 ### reduce方法
 - reduce()方法接收一个函数做为累加器，数组中的值从左到右缩减，最终计算为一个值。reduce对于空数组是不会执行回调函数的。
   - 语法 arr.reduce((total,currentValue,currentIndex,arr)=>{ }, initialValue)

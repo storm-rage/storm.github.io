@@ -1,5 +1,6 @@
 # 服务器配置
 ## nginx配置
+## node serve配置
 ## json-server配置
 没有接口测试很烦恼？试试`json-server`，不需要具备后端知识。
 相关资料：<https://juejin.cn/post/7043424909472563208#heading-4>

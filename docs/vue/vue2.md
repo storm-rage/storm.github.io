@@ -421,7 +421,7 @@ Vue.directive('focus', function(el, binding){
 - bind：只调用一次，指令第一次绑定到元素时调用，在这里可以进行一次性初始化操作。
 - inserted：被绑定元素插入父节点时调用（仅保证父节点存在，但不一定已被插入文档中）
 - update：所在组件的VNode更新时调用，但是可能发生在其子VNode更新之前。指令的值可能发生了改变，也可能没有。但是你可以通过比较更新后的值来忽略不必要的模版更新。
-- compotentUpdated：指令所在组件的VNode以及子VNode全部更新后调用。
+- componentUpdated：指令所在组件的VNode以及子VNode全部更新后调用。
 - unbind：只调用一次，指令与元素解绑时调用。
 ### 3、钩子函数入参
 - el：指令绑定的元素，可以直接用来操作dom

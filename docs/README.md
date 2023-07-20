@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /robot.gif
+heroImage: /robot_3.gif
 heroText: hello guys!
 tagline: 一点一滴都是进步
 actionText: 快速上手 →

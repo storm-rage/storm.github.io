@@ -31,6 +31,12 @@ module.exports = {
                     // {text: '实战总结', link: '/others/flutter'},
                 ]
             },
+            {
+                text: 'webSocket',
+                items: [
+                    {text:'webSocket',link: '/webSocket/chapter1.md'},
+                ]
+            },
             // {
             //     text: 'nodejs',
             //     items: [

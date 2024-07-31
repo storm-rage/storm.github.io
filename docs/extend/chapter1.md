@@ -14,21 +14,37 @@ var Socket = new WebSocket(url, [protocol] )
 //域名或IP地址：ws://localhost:3000，这是要连接的服务器的地址和端口号。
 //路径：最后URL可以包含一个路径，通常用于指定服务器上的特定WEbSocket端点或资源
 //例如
-ws://localhost:3000/chat://连接到example.com的80端口上的chat端点
-wss://localhost:3000/chat://连接到example.com的443端口上的chat端点，使用SSL/TLS加密。
+ws://localhost:3000/chat:  
+// 连接到example.com的80端口上的chat端点
+wss://localhost:3000/chat:  
+// 连接到example.com的443端口上的chat端点，使用SSL/TLS加密。
 ```
 ## 属性
-Socket.readyState
-//该只读属性返回一个数字值，表示连接状态：0表示尚未建立连接，1表示连接已建立，2表示连接正在进行关闭，3表示连接已经关闭或者连接不能打开。
+**Socket.readyState**
+- 该只读属性返回一个数字值，表示连接状态：
+  - 0表示尚未建立连接，
+  - 1表示连接已建立，
+  - 2表示连接正在进行关闭，
+  - 3表示连接已经关闭或者连接不能打开。
 
 ## 事件
-Soket.onopen //连接建立时触发
-Socket.onmessage //消息到达时触发
-Socket.onclose //连接关闭时触发
-Socket.onerror //连接发生错误时触发
+**Socket.onopen**
+- 连接建立时触发
+
+**Socket.onmessage**
+- 消息到达时触发
+
+**Socket.onclose**
+- 连接关闭时触发  
+
+**Socket.onerror** 
+- 连接发生错误时触发
 ## 方法
-Socket.send(data) //向服务器发送数据
-Socket.close() //关闭连接
+__Socket.send(data)__
+- 向服务器发送数据
+
+__Socket.close()__
+- 关闭连接
 
 ## 示例
 ```js

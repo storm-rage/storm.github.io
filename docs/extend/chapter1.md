@@ -5,7 +5,7 @@ WebSocket 使得客户端和服务器之间的数据交换变得更加简单，�
 
 1. WebSocket是一种双向通信协议。在建立连接后，WebSocket服务器端和客户端都能主动向对方发送或接收数据，就像Socket一样；
 2. WebSocket需要像TCP一样，先建立连接，连接成功后才能相互通信。
-## 
+## 实例
 ```js
 //创建一个WebSocket对象
 var Socket = new WebSocket(url, [protocol] )

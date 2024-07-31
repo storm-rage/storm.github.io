@@ -34,8 +34,8 @@ module.exports = {
             {
                 text: 'extend',
                 items: [
-                    {text:'webSocket',link: '/webSocket/chapter1.md'},
-                    {text:'electron',link: '/webSocket/electron.md'},
+                    {text:'webSocket',link: '/extend/chapter1.md'},
+                    {text:'electron',link: '/extend/electron.md'},
                 ]
             },
             // {

@@ -106,3 +106,54 @@ type PetList = [Dog, Pet];
 let div = document.createElement('div');
 type B = typeof div;
 ```
+## setTimeout、Promise、Async/Await 的区别
+setTimeout, Promise, 和 async/await 是JavaScript中处理异步操作的三种不同机制。它们各自有独特的用途和工作原理
+- setTimeout回调函数中的为宏任务，放在任务队列中，当主线程执行完所有同步任务，才会执行回调函数
+- promise是微任务，当主线程执行完所有同步任务，才会执行微任务，微任务执行完，才会执行宏任务
+- async/await是语法糖，async函数返回一个promise对象，await是等待promise对象，当promise对象resolved, await后边的代码才会执行
+- 主要区别
+  - setTimeout和promise都是异步执行，
+  - async/await是同步执行，async/await是语法糖，可以理解为promise的语法糖
+  - setTimeout和promise都是异步执行，但是promise可以链式调用，setTimeout不可以链式调用
+- 执行顺序
+  1. setTimeout是宏任务，promise是微任务，`async/await`是同步执行
+  2. `async/await` 本质上是基于 Promise 实现的异步操作方式。当遇到 `await` 关键字时，函数会暂停执行，等待 `await` 后面的 Promise 对象的状态变为 `fulfilled` 或 `rejected`，然后继续执行后续代码。
+     `setTimeout` 是一个宏任务，它会在指定的延迟时间后将回调函数放入宏任务队列等待执行。
+- js的执行逻辑
+  - js是单线程的，一次只能执行一个任务，当执行完一个宏任务后，会检查所有微任务，如果有微任务，则执行微任务，如果没有微任务，则执行下一个宏任务。
+  - 具体来说，微任务的执行优先级高于宏任务。也就是说，在一个宏任务执行完后，会立即清空微任务队列，将其中的所有微任务依次执行完毕，然后再去执行下一个宏任务
+## （微医）Promise 构造函数是同步执行还是异步执行，那么 then 方法呢？
+Promise 构造函数是同步执行，then 方法是异步执行。
+```js
+const promise = new Promise((resolve, reject) => {
+  console.log(1);
+  resolve(5);
+  console.log(2);
+}).then(val => {//promise实例后的第一个then
+  console.log(val);//resolve()传入的值5；
+});
+
+promise.then(() => {//promise实例后的第二个then
+  console.log(3);
+});
+
+console.log(4);
+
+setTimeout(function() {
+  console.log(6);
+});
+//执行顺序为124536
+```
+在 `Promise` 中，`resolve` 和 `reject` 本身的调用是同步的，但它们触发的后续 `then` 或 `catch` 中的回调函数的执行是异步的。
+```js
+const myPromise = new Promise((resolve, reject) => {
+  console.log('同步执行这部分');
+  resolve('成功的值');
+  console.log('这部分也是同步执行的');
+});
+
+myPromise.then(value => {
+  console.log('异步执行这里，值为:', value);
+});
+// 输出顺序为：同步执行这部分，这部分也是同步执行的，异步执行这里，值为: 成功的值
+```

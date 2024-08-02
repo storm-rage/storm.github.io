@@ -157,3 +157,10 @@ myPromise.then(value => {
 });
 // 输出顺序为：同步执行这部分，这部分也是同步执行的，异步执行这里，值为: 成功的值
 ```
+## 以下判断数组的方法，请分别介绍它们之间的区别和优劣：Object.prototype.toString.call() 、 instanceof 以及 Array.isArray()
+- `Object.prototype.toString.call()`
+  - `Object.prototype.toString.call()` 是一个全局方法，用于返回对象的字符串形式，返回的字符串形式为 `[object 类型]`，其中 `类型` 是对象的类型。 
+- `instanceof`
+  - `instanceof` 是一个运算符，用于判断一个对象是否是某个类的实例。 
+- `Array.isArray()`
+  - `Array.isArray()` 是一个全局方法，用于判断一个对象是否是数组。 

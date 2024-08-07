@@ -362,6 +362,22 @@ export default {
 }
 ```
 ### 7、Vuex
+Vuex的工作流程主要围绕其核心组件展开，包括‌state（状态）、‌mutations（修改状态的方法）、‌actions（触发mutations的方法，可以包含异步操作）、和‌getters（获取状态的方法）。
+这些组件共同协作，实现了Vue应用程序中状态的集中管理和变化追踪。
+- Vuex核心组件概述
+  - State：存储应用程序的状态，是唯一的数据源。
+  - Mutations：唯一改变状态的方法，必须是同步的。
+  - Actions：包含异步操作，可以调用mutations。
+  - Getters：基于state计算属性，用于获取和处理状态数据。
+- Vuex工作流程详解
+  - 初始化Vuex Store：在项目的入口文件（如main.js）中引入Vue和Vuex，并创建一个新的Vuex Store实例。
+  - 通过Mutations修改State：组件通过提交mutations来修改state，这是唯一改变状态的方式。
+  - 使用Getters获取数据：getters用于获取和处理状态数据，可以基于state创建计算属性。
+  - Actions处理异步操作：actions可以包含异步操作，如API请求，并触发mutations来改变状态。
+- Vue组件中使用Vuex
+ - 使用mapState、mapMutations、mapActions和mapGetters辅助函数简化对Vuex的访问。这些辅助函数将Vuex中的状态、mutations、actions和getters映射到Vue组件中，使组件能够直接访问和操作这些数据。
+  通过上述流程，Vuex提供了一个集中管理应用程序状态的方式，确保了状态的单一来源和可预测性。同时，通过mutations和actions的明确划分，使得状态的修改和异步操作更加清晰和可控
+
 - 组件间通讯
 ### 8、缓存
 - localStorage, sessionStorage

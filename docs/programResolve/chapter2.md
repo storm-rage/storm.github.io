@@ -169,3 +169,15 @@ myPromise.then(value => {
   - `instanceof` 是一个运算符，用于判断一个对象是否是某个类的实例。 
 - `Array.isArray()`
   - `Array.isArray()` 是一个全局方法，用于判断一个对象是否是数组。 
+## promise的相关api
+- 静态方法
+  - Promise.all()
+  - Promise.allSettled()
+  - Promise.any()
+  - Promise.race()
+  - Promise.resolve()
+  - Promise.reject()
+- 实例方法
+  - Promise.prototype.then()
+  - Promise.prototype.catch()
+  - Promise.prototype.finally()

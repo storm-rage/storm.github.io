@@ -172,9 +172,21 @@ myPromise.then(value => {
 ## promise的相关api
 - 静态方法
   - Promise.all()
+  
+    `Promise.all()` 方法是 promise 并发方法之一。它可用于聚合多个 Promise 的结果。通常在有多个相关的异步任务并且整个代码依赖于这些任务成功完成时使用，我们希望在代码执行继续之前完成所有任务。
+    `Promise.all()` 方法会在任何一个输入的 Promise 被拒绝时立即拒绝。
+  相比之下，`Promise.allSettled()` 方法返回的 Promise 会等待所有输入的 Promise 完成，不管其中是否有 Promise 被拒绝。如果你需要获取输入可迭代对象中每个 Promise 的最终结果，则应使用 allSettled() 方法
   - Promise.allSettled()
+  
+      `Promise.allSettled()` 方法是 promise 并发方法之一。在你有多个不依赖于彼此成功完成的异步任务时，或者你总是想知道每个 promise 的结果时，使用 `Promise.allSettled()`。
+    相比之下，如果任务相互依赖，或者如果你想在任何 promise 被拒绝时立即拒绝，`Promise.all()` 返回的 Promise 可能更合适。
   - Promise.any()
+  
+    `Promise.any()` 会以第一个兑现的 Promise 来兑现，即使有 Promise 先被拒绝
+    `Promise.any()` 方法是 Promise 并发方法之一。该方法对于返回第一个兑现的 Promise 非常有用。一旦有一个 Promise 兑现，它就会立即返回，因此不会等待其他 Promise 完成
   - Promise.race()
+  
+  在多个promise并发时，`promise.race()`用于判断哪个先完成，即只需要等待其中一个完成即可。
   - Promise.resolve()
   - Promise.reject()
 - 实例方法

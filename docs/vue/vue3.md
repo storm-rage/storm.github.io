@@ -276,7 +276,7 @@ export default {
       familyName:'阿',
       lastName:'斌'
     })
-    fullName=computed(()=>{
+    let fullName = computed(()=>{
       return names.familyName+'.'+names.lastName
     })
     return {

@@ -211,20 +211,49 @@ export default {
 - 通过Proxy（代理）: 拦截对象中任意属性的变化, 包括：属性值的读写、属性的添加、属性的删除等。
 - 通过Reflect（反射）: 对源对象的属性进行操作。
 ```js
-  const p=new Proxy(data, {
-  // 读取属性时调用
-  get (target, propName) {
-  return Reflect.get(target, propName)
-  },
-  //修改属性或添加属性时调用
-  set (target, propName, value) {
-  return Reflect.set(target, propName, value)
-  },
-  //删除属性时调用
-  deleteProperty (target, propName) {
-  return Reflect.deleteProperty(target, propName)
-  }
+  const p = new Proxy(data, {
+      // 读取属性时调用
+      get (target, propName) {
+        return Reflect.get(target, propName)
+      },
+      //修改属性或添加属性时调用
+      set (target, propName, value) {
+        return Reflect.set(target, propName, value)
+      },
+      //删除属性时调用
+      deleteProperty (target, propName) {
+        return Reflect.deleteProperty(target, propName)
+      }
   })
+
+//proxy对象案例
+let targetObj = {
+    name:'张三',
+    age: 18,
+    job: {
+        occupation:'程序员',
+        salary:'10k',
+    }
+}
+let handler = {
+    get: (target, propName) => {
+        console.log('读取属性：'+propName)
+        return Reflect.get(target, propName)
+        //如果不用 Reflect，直接return target[propName]
+    },
+    set: (target, propName, value) => {
+        console.log('修改属性：'+propName+'='+value)
+        return Reflect.set(target, propName, value)
+        //不用 Reflect，直接return target[propName] = value
+    },
+    deleteProperty: (target, propName) => {
+        return Reflect.deleteProperty(target, propName)
+        //不用 Reflect，直接return delete target[propName]
+    }
+}
+let proxyObj = new Proxy(targetObj, handler)
+proxyObj.name//读取属性：name
+proxyObj.name = '王五'//修改属性：name=王五
 ```
 ### computed,watch与watchEffect
 computed

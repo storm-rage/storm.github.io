@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>electron项目问题处理 | 飞琼神仙客</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/storm.github.io/robot.gif">
+    <meta name="description" content="Just playing around">
+    
+    <link rel="preload" href="/storm.github.io/assets/css/0.styles.9a880087.css" as="style"><link rel="preload" href="/storm.github.io/assets/js/app.526be6c5.js" as="script"><link rel="preload" href="/storm.github.io/assets/js/2.733019b2.js" as="script"><link rel="preload" href="/storm.github.io/assets/js/30.14150c78.js" as="script"><link rel="prefetch" href="/storm.github.io/assets/js/10.cd3bf797.js"><link rel="prefetch" href="/storm.github.io/assets/js/11.c7111e07.js"><link rel="prefetch" href="/storm.github.io/assets/js/12.97871f7e.js"><link rel="prefetch" href="/storm.github.io/assets/js/13.d4bb0251.js"><link rel="prefetch" href="/storm.github.io/assets/js/14.c777bc3d.js"><link rel="prefetch" href="/storm.github.io/assets/js/15.49becd64.js"><link rel="prefetch" href="/storm.github.io/assets/js/16.ca73a9c0.js"><link rel="prefetch" href="/storm.github.io/assets/js/17.b055ae29.js"><link rel="prefetch" href="/storm.github.io/assets/js/18.30c3591b.js"><link rel="prefetch" href="/storm.github.io/assets/js/19.da88cf3c.js"><link rel="prefetch" href="/storm.github.io/assets/js/20.9a8f9b7c.js"><link rel="prefetch" href="/storm.github.io/assets/js/21.5536e2e2.js"><link rel="prefetch" href="/storm.github.io/assets/js/22.d2acb52f.js"><link rel="prefetch" href="/storm.github.io/assets/js/23.c9d77acf.js"><link rel="prefetch" href="/storm.github.io/assets/js/24.91a36dd9.js"><link rel="prefetch" href="/storm.github.io/assets/js/25.691a3c94.js"><link rel="prefetch" href="/storm.github.io/assets/js/26.d2350c89.js"><link rel="prefetch" href="/storm.github.io/assets/js/27.c3d48c93.js"><link rel="prefetch" href="/storm.github.io/assets/js/28.0d829079.js"><link rel="prefetch" href="/storm.github.io/assets/js/29.19131c04.js"><link rel="prefetch" href="/storm.github.io/assets/js/3.5159e18b.js"><link rel="prefetch" href="/storm.github.io/assets/js/31.200efbad.js"><link rel="prefetch" href="/storm.github.io/assets/js/32.e1493369.js"><link rel="prefetch" href="/storm.github.io/assets/js/33.41f8f755.js"><link rel="prefetch" href="/storm.github.io/assets/js/34.6b085fa9.js"><link rel="prefetch" href="/storm.github.io/assets/js/35.f2e6c3b1.js"><link rel="prefetch" href="/storm.github.io/assets/js/36.f03a89d4.js"><link rel="prefetch" href="/storm.github.io/assets/js/37.55bfcb80.js"><link rel="prefetch" href="/storm.github.io/assets/js/38.88948b61.js"><link rel="prefetch" href="/storm.github.io/assets/js/39.61957e20.js"><link rel="prefetch" href="/storm.github.io/assets/js/4.fc333d27.js"><link rel="prefetch" href="/storm.github.io/assets/js/40.1a6858ec.js"><link rel="prefetch" href="/storm.github.io/assets/js/41.15c6539b.js"><link rel="prefetch" href="/storm.github.io/assets/js/42.1f465cd7.js"><link rel="prefetch" href="/storm.github.io/assets/js/43.4db5259f.js"><link rel="prefetch" href="/storm.github.io/assets/js/44.27505d7f.js"><link rel="prefetch" href="/storm.github.io/assets/js/45.c0263933.js"><link rel="prefetch" href="/storm.github.io/assets/js/5.bfef3080.js"><link rel="prefetch" href="/storm.github.io/assets/js/6.2d0a63f8.js"><link rel="prefetch" href="/storm.github.io/assets/js/7.3db22c2d.js"><link rel="prefetch" href="/storm.github.io/assets/js/8.f00ffa05.js"><link rel="prefetch" href="/storm.github.io/assets/js/9.c164aeaf.js">
+    <link rel="stylesheet" href="/storm.github.io/assets/css/0.styles.9a880087.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/storm.github.io/" class="home-link router-link-active"><img src="/storm.github.io/robot.gif" alt="飞琼神仙客" class="logo"> <span class="site-name can-hide">飞琼神仙客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/storm.github.io/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue" class="mobile-dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/storm.github.io/vue/vue2.html" class="nav-link">
+  vue2
+</a></li><li class="dropdown-item"><!----> <a href="/storm.github.io/vue/vue3.html" class="nav-link">
+  vue3
+</a></li><li class="dropdown-item"><!----> <a href="/storm.github.io/vue/vuex.html" class="nav-link">
+  vuex
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="React" class="dropdown-title"><span class="title">React</span> <span class="arrow down"></span></button> <button type="button" aria-label="React" class="mobile-dropdown-title"><span class="title">React</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/storm.github.io/react/reactExtend.html" class="nav-link">
+  react进阶
+</a></li><li class="dropdown-item"><!----> <a href="/storm.github.io/react/reactDiff.html" class="nav-link">
+  react与vue区别
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="extend" class="dropdown-title"><span class="title">extend</span> <span class="arrow down"></span></button> <button type="button" aria-label="extend" class="mobile-dropdown-title"><span class="title">extend</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/storm.github.io/extend/chapter1.html" class="nav-link">
+  webSocket
+</a></li><li class="dropdown-item"><!----> <a href="/storm.github.io/extend/electron.html" class="nav-link">
+  electron
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工程化" class="dropdown-title"><span class="title">工程化</span> <span class="arrow down"></span></button> <button type="button" aria-label="工程化" class="mobile-dropdown-title"><span class="title">工程化</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/storm.github.io/Engineering/tools.html" class="nav-link">
+  常用工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="问题总结" class="dropdown-title"><span class="title">问题总结</span> <span class="arrow down"></span></button> <button type="button" aria-label="问题总结" class="mobile-dropdown-title"><span class="title">问题总结</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/storm.github.io/programResolve/chapter1.html" class="nav-link">
+  章节一
+</a></li><li class="dropdown-item"><!----> <a href="/storm.github.io/programResolve/chapter2.html" class="nav-link">
+  章节二
+</a></li><li class="dropdown-item"><!----> <a href="/storm.github.io/programResolve/advancedSkills.html" class="nav-link">
+  高级技能
+</a></li><li class="dropdown-item"><!----> <a href="/storm.github.io/programResolve/ts.html" class="nav-link">
+  ts
+</a></li><li class="dropdown-item"><!----> <a href="/storm.github.io/programResolve/serve.html" class="nav-link">
+  服务器
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其它" class="dropdown-title"><span class="title">其它</span> <span class="arrow down"></span></button> <button type="button" aria-label="其它" class="mobile-dropdown-title"><span class="title">其它</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/storm.github.io/programResolve/others/diyPage.html" class="nav-link">
+  自定义首页
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/storm.github.io/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue" class="mobile-dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/storm.github.io/vue/vue2.html" class="nav-link">
+  vue2
+</a></li><li class="dropdown-item"><!----> <a href="/storm.github.io/vue/vue3.html" class="nav-link">
+  vue3
+</a></li><li class="dropdown-item"><!----> <a href="/storm.github.io/vue/vuex.html" class="nav-link">
+  vuex
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="React" class="dropdown-title"><span class="title">React</span> <span class="arrow down"></span></button> <button type="button" aria-label="React" class="mobile-dropdown-title"><span class="title">React</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/storm.github.io/react/reactExtend.html" class="nav-link">
+  react进阶
+</a></li><li class="dropdown-item"><!----> <a href="/storm.github.io/react/reactDiff.html" class="nav-link">
+  react与vue区别
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="extend" class="dropdown-title"><span class="title">extend</span> <span class="arrow down"></span></button> <button type="button" aria-label="extend" class="mobile-dropdown-title"><span class="title">extend</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/storm.github.io/extend/chapter1.html" class="nav-link">
+  webSocket
+</a></li><li class="dropdown-item"><!----> <a href="/storm.github.io/extend/electron.html" class="nav-link">
+  electron
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工程化" class="dropdown-title"><span class="title">工程化</span> <span class="arrow down"></span></button> <button type="button" aria-label="工程化" class="mobile-dropdown-title"><span class="title">工程化</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/storm.github.io/Engineering/tools.html" class="nav-link">
+  常用工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="问题总结" class="dropdown-title"><span class="title">问题总结</span> <span class="arrow down"></span></button> <button type="button" aria-label="问题总结" class="mobile-dropdown-title"><span class="title">问题总结</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/storm.github.io/programResolve/chapter1.html" class="nav-link">
+  章节一
+</a></li><li class="dropdown-item"><!----> <a href="/storm.github.io/programResolve/chapter2.html" class="nav-link">
+  章节二
+</a></li><li class="dropdown-item"><!----> <a href="/storm.github.io/programResolve/advancedSkills.html" class="nav-link">
+  高级技能
+</a></li><li class="dropdown-item"><!----> <a href="/storm.github.io/programResolve/ts.html" class="nav-link">
+  ts
+</a></li><li class="dropdown-item"><!----> <a href="/storm.github.io/programResolve/serve.html" class="nav-link">
+  服务器
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其它" class="dropdown-title"><span class="title">其它</span> <span class="arrow down"></span></button> <button type="button" aria-label="其它" class="mobile-dropdown-title"><span class="title">其它</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/storm.github.io/programResolve/others/diyPage.html" class="nav-link">
+  自定义首页
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>electron项目问题处理</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/storm.github.io/programResolve/electron.html#序列画布设计思路" class="sidebar-link">序列画布设计思路</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/storm.github.io/programResolve/electron.html#特殊组件适配序列画布工作项展开收起" class="sidebar-link">特殊组件适配序列画布工作项展开收起</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/storm.github.io/programResolve/electron.html#序列画布问题待解决" class="sidebar-link">序列画布问题待解决</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/storm.github.io/programResolve/electron.html#导出导入流程块" class="sidebar-link">导出导入流程块</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/storm.github.io/programResolve/electron.html#发现的问题" class="sidebar-link">发现的问题</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/storm.github.io/programResolve/electron.html#序列画布数据扁平化思路" class="sidebar-link">序列画布数据扁平化思路</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/storm.github.io/programResolve/electron.html#拾取" class="sidebar-link">拾取</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="electron项目问题处理"><a href="#electron项目问题处理" class="header-anchor">#</a> electron项目问题处理</h1> <h2 id="序列画布设计思路"><a href="#序列画布设计思路" class="header-anchor">#</a> 序列画布设计思路</h2> <p>所有节点遵循整体从上到下的执行顺序，存在特殊组件则根据特殊策略执行</p> <p>主体画布改动点
+初层画布删除，入口改为从流程图序列组件的编辑按钮进入序列画布
+画布删除后，画布功能是否有影响或遗漏
+序列组件无法展示特殊组件，如何改动合适，还是维持不变？
+首页和设置的画布模式删除，
+其它画布模式的数据关联点要处理
+流程json文件中的画布模式是否删除等
+智能设计增加按钮返回到序列画布或者流程图画布
+涉及到的改动
+改动可能涉及到的功能问题，
+智能模式，序列画布，流程画布等导出功能
+目的
+降低用户使用成本和学习成本
+流程文件扁平化存储
+序列特殊组件收缩后在画布的展示，发布、导出屏蔽原来的流程块逻辑</p> <h2 id="特殊组件适配序列画布工作项展开收起"><a href="#特殊组件适配序列画布工作项展开收起" class="header-anchor">#</a> 特殊组件适配序列画布工作项展开收起</h2> <p>判断文件是否存在、判断元素是否存在、判断目标是否存在、异常组件、循环、遍历，以上组件的嵌套适配
+先看交接文档，哪些组件已经适配，哪些问题需要注意并解决</p> <h2 id="序列画布问题待解决"><a href="#序列画布问题待解决" class="header-anchor">#</a> 序列画布问题待解决</h2> <p>流程画布执行循环，从loop_node锚点连出线，循环执行其后的节点
+序列画布模式执行循环时应该默认循环执行循环内的节点，因为在序列中是没有loop_node锚点连线的，
+该问题在沉浸式和序列画布模式均存在待解决，可能需要执行器配合修改</p> <p>2.20号会议改动内容记录
+1、candition_data的内容跟propertier中的value内容一致，需要删除candition_data，并把value其下的nodes中的节点信息只保存节点id，把相对应的节点信息存放到跟特殊组件节点同级目录下
+2、特殊组件嵌套处理
+3、遍历组件适配</p> <h2 id="导出导入流程块"><a href="#导出导入流程块" class="header-anchor">#</a> 导出导入流程块</h2> <p>导出需要保存流程块的节点信息，包括id，锚点，定位，属性等，还有流程块内的节点
+导入需要分别插入流程块和节点信息</p> <h2 id="发现的问题"><a href="#发现的问题" class="header-anchor">#</a> 发现的问题</h2> <p>智能设计涉及到的问题，
+特殊组件内部插入组件方式（插入线显示有问题，拖入有问题），
+流程块切换数据未切换，
+序列画布遍历组件后连接一个打印则为正常执行遍历内部的节点组件
+节点参数编辑，特殊组件内嵌套节点删除等右键功能，执行</p> <p>配置业务组件，推荐窗口展示，点击后插入对应节点到序列中，对执行器包装为一个点击组件，完成</p> <h2 id="序列画布数据扁平化思路"><a href="#序列画布数据扁平化思路" class="header-anchor">#</a> 序列画布数据扁平化思路</h2> <p>原因分析：
+遍历连线，嵌套节点连线从内部开始执行，
+问题：多层嵌套下，中间的嵌套节点尚未插入
+遍历注意source的格式是条件锚点的，target节点才是嵌套节点
+解决思路：
+遍历整个graphdata下的nodes，找到插入起始节点，插入目标，
+保存到json时删除各嵌套节点下的nodes</p> <p>第二方案
+扁平化设计思路，主要目标为在初始化画布之前，将sequence的nodes数据处理为之前模式的数据形式，该方案也需要向节点内部递归遍历以处理数据，优点在于遍历顺序相对不那么混乱容易理解，而且初始化方法不用做任何修改</p> <p>第一层遍历线条
+第二层</p> <p>遍历当前序列所有节点,拿到source和target节点
+再一次遍历所有节点，分情况插入节点：</p> <p>如果source是特殊组件那么target必然是其嵌套节点的第一个，找到并插入target；
+如果要插入第二个节点，source可能是普通节点，线从底部连出，
+需要找到它的source节点插入在哪了，然后跟着插入（它们都是嵌套节点，而且父节点必然是特殊组件）</p> <h1 id="特殊组件的无限嵌套"><a href="#特殊组件的无限嵌套" class="header-anchor">#</a> 特殊组件的无限嵌套</h1> <p>组件之间互相嵌套，并且可以嵌套自身无限次
+引入自身的时候，常规引入组件的方式会报错组件未注册，此时需要采用另一种方式，在<code>beforeCreate</code>中注册</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">beforeCreate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>$options<span class="token punctuation">.</span>components<span class="token punctuation">[</span><span class="token string">'ConditionIf'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./condition_if.vue'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>default
+    <span class="token keyword">this</span><span class="token punctuation">.</span>$options<span class="token punctuation">.</span>components<span class="token punctuation">[</span><span class="token string">'ExceptionCatch'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./exceptionCatch.vue'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>default
+    <span class="token keyword">this</span><span class="token punctuation">.</span>$options<span class="token punctuation">.</span>components<span class="token punctuation">[</span><span class="token string">'ProcessIterator'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./processIterator.vue'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>default
+    <span class="token keyword">this</span><span class="token punctuation">.</span>$options<span class="token punctuation">.</span>components<span class="token punctuation">[</span><span class="token string">'ProcessWhile'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./processWhile.vue'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>default
+    <span class="token keyword">this</span><span class="token punctuation">.</span>$options<span class="token punctuation">.</span>components<span class="token punctuation">[</span><span class="token string">'ProcessFold'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./processFold.vue'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>default
+  <span class="token punctuation">}</span>
+</code></pre></div><h1 id="node相关"><a href="#node相关" class="header-anchor">#</a> node相关</h1> <h1 id="沉浸式模式设计与问题处理"><a href="#沉浸式模式设计与问题处理" class="header-anchor">#</a> 沉浸式模式设计与问题处理</h1> <p>沉浸式设计中：输入文本，不用提示框和确认按钮，默认盖一层输入框即可，不用推荐输入文本组件。
+拾取输入框
+动态改变输入组件宽高
+通过检测输入框拾取焦点或按下回车键确认输入完成</p> <p>滚动桌面，关闭拾取推荐窗
+方案：用户无操作通过鼠标位置是否改变，设置定时器3-5秒控制
+问题
+用户正常识别元素无操作超时也会执行关闭逻辑
+原因：窗口穿透无法获取窗口滚动事件，若关闭窗口穿透则拾取窗口下的网页无法滚动
+问题待优化
+推荐窗几率出现卡屏，拾取窗口已消失，推荐窗还在，重新开启设计后问题消失，疑似拾取元素出现问题导致
+滚动窗口重新根据鼠标位置拾取元素判断并关闭推荐窗，请求次数太多问题优化</p> <h2 id="拾取"><a href="#拾取" class="header-anchor">#</a> 拾取</h2> <p>2.1.1.2 拾取窗口优化需求
+文本，按钮，超链接 ，输入框
+自动生成组件
+按钮，超链接，</p> <p>如果拾取到的元素的推荐组件第一个是鼠标单击则不展示推荐窗口，
+在拾取穿梭框覆盖一层div，添加点击事件（相应不到？），监听并插入组件，如果鼠标移动关掉div，再拾取重新开启div
+如果拾取到输入框
+用箭头控制推荐窗口的展开和收起
+10.28会议总结技术方案</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/storm.github.io/assets/js/app.526be6c5.js" defer></script><script src="/storm.github.io/assets/js/2.733019b2.js" defer></script><script src="/storm.github.io/assets/js/30.14150c78.js" defer></script>
+  </body>
+</html>

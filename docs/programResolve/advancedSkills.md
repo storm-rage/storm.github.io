@@ -47,12 +47,10 @@
 9. window.name + iframe
 10. window.postMessage
 11. 跨子域的通信
-12. 跨域资源共享（CORS）
-13. 跨文档通信（Cross-document messaging）
-14. 预检请求（Preflighted requests）
-15. 服务器端设置Access-Control-Allow-Origin
-16. 跨浏览器的CORS
-17. 跨域资源共享（CORS）
+12. 跨文档通信（Cross-document messaging）
+13. 预检请求（Preflighted requests）
+14. 服务器端设置Access-Control-Allow-Origin
+15. 跨浏览器的CORS
 ## 3. 谈谈各种本地存储方案的优势与弊端？
 1. cookie
 2. localStorage

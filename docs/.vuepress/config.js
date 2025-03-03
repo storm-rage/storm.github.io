@@ -76,6 +76,12 @@ module.exports = {
                     // {text: '面试要点', link: '/programResolve/interview.md'},
                 ]
             },
+            {
+                text: '其它',
+                items: [
+                    {text: '自定义首页', link: 'others/diyPage.md'},
+                ]
+            }
         ],
         sidebar: 'auto',//根据文章标题 自动生成侧边栏
         // sidebar: {

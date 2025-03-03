@@ -452,7 +452,7 @@ beforeDestroy改名为beforeUnmount,destroyed改名为unmounted
 **在vue3中也可以按照之前的生命周期函数那样写，只是要记得有些函数名称发生了改变**  
 在setup里面应该这样写
 - beforeCreate===>Not needed*
-- created=======>Not needed*
+- created=======>Not needed*  相当于setup
 - beforeMount ===>onBeforeMount
 - mounted=======>onMounted
 - beforeUpdate===>onBeforeUpdate
